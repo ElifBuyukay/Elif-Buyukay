@@ -101,13 +101,7 @@
     
   }
 
-  /* İletişim Bölümü Stili */
-#İletişim {
-  background-color: #f9f9f9; /* Arka plan rengi */
-  border-radius: 10px; /* Köşeleri yuvarla */
-  padding: 40px; /* İçerik boşluğu */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-}
+
 
 /* İletişim Bölümü Başlıkları */
 #İletişim h1 {
