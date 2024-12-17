@@ -86,7 +86,15 @@
   }
 
   
-
+/* Fotoğraf hover efekti için stil */
+  .hover-container img {
+    width: 100%;
+    max-width: 500px; /* Maksimum genişlik */
+    height: auto;
+    margin: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Geçiş animasyonu */
+  }
   /* Hover efekti */
   .hover-container img:hover {
     transform: scale(1.1); /* %10 büyütme */
