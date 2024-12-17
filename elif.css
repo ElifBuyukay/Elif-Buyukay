@@ -1,0 +1,129 @@
+/* Hakkında Kısmı Genel Stil */
+#wrapper-about {
+  padding: 0 20px;
+}
+
+/* Row düzeni */
+.w3-row {
+  display: flex; /* Flexbox düzeni */
+  justify-content: center; /* Ortala */
+  align-items: center; /* Dikeyde ortala */
+  flex-wrap: wrap; /* Mobilde alt alta geçebilmesi için */
+}
+
+/* Yazı bloğu */
+.text-block {
+  text-align: justify; /* Yazıyı hizala */
+  font-size: 18px;
+}
+
+/* Fotoğraf bloğu */
+.w3-image {
+  width: 80%; /* Resim genişliği tam */
+  height: auto; /* Orantılı yükseklik */
+}
+
+/* Masaüstü görünümü */
+@media screen and (min-width: 601px) {
+  .w3-col.m6 {
+    flex: 0 0 48%; /* Her iki blok %48 genişlikte olacak */
+    margin: 10px;
+  }
+  .w3-image {
+    width: 90%; /* Masaüstünde fotoğrafı %60 genişliğe getir */
+  }
+}
+
+/* Mobil görünümü */
+@media screen and (max-width: 600px) {
+  .w3-col.s12 {
+    flex: 0 0 100%; /* Mobilde her şey tam genişlikte */
+    margin: 10px 0; /* Araya boşluk ekle */
+  }
+
+  .text-block {
+    font-size: 16px; /* Mobilde font boyutunu küçült */
+  }
+
+  /* Resim genişliği için mobil ayar */
+  .w3-image {
+    width: 85%; /* Resim genişliği mobilde %100 */
+    height: auto;
+    display: block; /* Bloğa dönüştür */
+    margin-left: auto; /* Sol tarafı ortala */
+    margin-right: auto; /* Sağ tarafı ortala */
+  }
+}
+
+/* Mobilde ve masaüstünde uyumlu yazı boyutları için medya sorguları */
+@media (max-width: 768px) {
+  #Bilgi h2 {
+    font-size: 1.5rem; /* Daha küçük ekranlar için başlık boyutları küçültüldü */
+  }
+  #Bilgi p {
+    font-size: 1rem; /* Yazı boyutları küçültüldü */
+  }
+}
+
+  /* Konteyner: Hover efekti için stil */
+  .hover-container {
+    position: relative;
+    overflow: hidden; /* Taşan içerikleri gizle */
+  }
+
+  /* Resim: Temel stil */
+  .hover-container img {
+    width: 100%; /* Tam genişlik */
+    height: auto; /* Orantıyı koru */
+    display: block; /* Kenar boşluklarını kaldır */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Geçiş animasyonu */
+  }
+
+  /* Hover efekti: Resmi büyüt ve parlaklığı artır */
+  .hover-container img:hover {
+    transform: scale(1.1); /* Resmi büyüt */
+   
+  }
+
+  /* Fotoğraf hover efekti için stil */
+  .hover-container img {
+    width: 100%;
+    max-width: 500px; /* Maksimum genişlik */
+    height: auto;
+    margin: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Geçiş animasyonu */
+  }
+
+  /* Hover efekti */
+  .hover-container img:hover {
+    transform: scale(1.1); /* %10 büyütme */
+    
+  }
+
+  /* İletişim Bölümü Stili */
+#İletişim {
+  background-color: #f9f9f9; /* Arka plan rengi */
+  border-radius: 10px; /* Köşeleri yuvarla */
+  padding: 40px; /* İçerik boşluğu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/* İletişim Bölümü Başlıkları */
+#İletişim h1 {
+  font-size: 2.5rem; /* Başlık boyutu */
+  color: #333; /* Başlık rengi */
+}
+
+#İletişim p {
+  font-size: 1.2rem; /* Paragraf yazı boyutu */
+  line-height: 1.8; /* Satır aralığı */
+  color: #555; /* Paragraf yazı rengi */
+}
+
+/* İkonların Görünümü */
+#İletişim i {
+  margin-right: 10px;
+}
+
+

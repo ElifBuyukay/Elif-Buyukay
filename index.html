@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yemek Fotoğrafçılığı Blogu</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="elif.css">
+  <!-- Font Awesome için CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: "Arial", Georgia, Serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 5px;
+    }
+
+  
+    /* Slider Image Responsive */
+    .mySlides img {
+      width: 100%; /* Resimler mobil uyumlu hale getirilir */
+      height: auto;
+    }
+
+    /* Yüksek ekranlarda slider için daha büyük boyut */
+    @media screen and (min-width: 600px) {
+      .mySlides img {
+        width: 75%; /* Orta ve büyük ekranlarda resimler daha büyük görünür */
+      }
+    }
+
+    /* Diğer mobil düzenlemeler */
+    @media screen and (max-width: 600px) {
+      .w3-display-container {
+        padding: 0; /* Mobilde gereksiz boşlukları kaldır */
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <!-- Logo -->
+    <a href="#home" class="w3-bar-item w3-button">
+      <img src="logo.png" alt="Logo" style="height: 50px;">
+    </a>
+
+  
+
+    <!-- Navbar Linkleri -->
+    <a href="#Anasayfa" class="w3-bar-item w3-button w3-padding-large">Anasayfa</a>
+    <a href="#Hakkında" class="w3-bar-item w3-button w3-padding-large">Hakkında</a>
+    <a href="#Bilgi" class="w3-bar-item w3-button w3-padding-large">Bilgi</a>
+    <a href="#İletişim" class="w3-bar-item w3-button w3-padding-large">İletişim</a>
+
+    
+  </div>
+</div>
+
+<!-- Dropdown Menü (Mobilde Görünür) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#Hakkında" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Hakkında</a>
+  <a href="#Bilgi" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Bilgi</a>
+  <a href="#İletişim" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">İletişim</a>
+</div>
+
+<!-- JavaScript -->
+<script>
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  // Menü açık mı kontrol et
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show"; // Menü görünür hale gelir
+  } else {
+    x.className = x.className.replace(" w3-show", ""); // Menü gizlenir
+  }
+}
+
+// Menü, büyük ekranlar için de açılabilir olacak şekilde
+function toggleNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show"; // Menü görünür hale gelir
+  } else {
+    x.className = x.className.replace(" w3-show", ""); // Menü gizlenir
+  }
+}
+</script>
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="Anasayfa">
+  <div class="w3-container w3-center">
+    <!-- Slider Images -->
+    <div class="mySlides w3-display-container w3-center" style="display: block;">
+      <img src="yemek.jpg" alt="Yemek Fotoğrafı 1">
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="yemek1.jpg" alt="Yemek Fotoğrafı 2">
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="yemek2.jpg" alt="Yemek Fotoğrafı 3">
+    </div>
+  </div>
+</header>
+
+<!-- JavaScript (Slider Geçişi) -->
+<script>
+  var slideIndex = 0;
+
+  // Slider'ı başlat
+  showSlides();
+
+  function showSlides() {
+    var slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+  function startSlides() {
+    showSlides();
+    slideInterval = setInterval(showSlides, 3000);
+  }
+
+  window.onload = startSlides;
+</script>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px;">
+  <!-- Your page content here -->
+</div>
+
+<!-- About Section -->
+ <div id="wrapper-about">
+<div class="w3-row w3-padding-64" id="Hakkında">
+  <div class="w3-col s12 m6 w3-padding-large text-block"> <!-- 's12' mobilde tam genişlik alması için eklenmiştir -->
+    <h1 class="w3-center">Yemek Fotoğrafçılığı</h1>
+    <p class="w3-large">
+      Hoş Geldiniz!<br>
+      Ben Elif, yemeklerin büyüleyici görselliğini ve lezzet dolu hikayelerini paylaşmayı seven bir yemek fotoğrafçısıyım. Bu blog, yemeklerin sadece tat olarak değil, aynı zamanda görsel bir sanat eseri olarak da keyfini çıkarabileceğimiz bir platform olarak hayata geçti.<br>
+      Yemek fotoğrafçılığına olan tutkum, evde pişirdiğim yemeklerin fotoğraflarını çekip paylaşmamla başladı. Zamanla, fotoğrafçılık tekniklerini öğrenerek ve yeni tarifler keşfederek kendimi bu alanda geliştirdim. Şimdi, yemeklerin estetik bir şekilde sunumunu ve her bir yemeğin ardındaki hikayeyi anlatmayı amaçlıyorum.</p>
+      
+  </div>
+  
+  <div class="w3-col s12 m6 w3-padding-large"> <!-- 's12' mobilde tam genişlik alması için eklenmiştir -->
+    <div class="hover-container">
+    <img src="food.jpg" class="w3-round w3-image w3-center" alt="Table Setting"> <!-- Mobilde tam genişlik -->
+  </div>
+</div>
+</div>
+<hr>
+
+<!-- Photography Section -->
+<div class="w3-row w3-padding-64" id="Bilgi">
+  <div class="w3-col s12 m6 l6 w3-padding-large"> <!-- 's12' mobilde tam genişlik alması için eklenmiştir -->
+    <h1 class="w3-center">Estetik</h1>
+    <h2 style="color: black; font-size: 1.8rem;">Fotoğrafçılığa Giriş</h2>
+    <p class="w3-medium" style="line-height:1.6;">Yemek fotoğrafçılığı, yemeğin estetik yönlerini ön plana çıkaran bir sanattır. Bu alanda dikkat edilmesi gereken en önemli unsurlar ışık, kompozisyon ve renk uyumudur. Her bir yemeğin detaylarına odaklanarak, görsel bir hikaye yaratmak amacı güdülür...</p><br>
+
+    <h2 style="color: black; font-size: 1.8rem;">Yemek Fotoğrafçılığı Teknikleri</h2>
+    <p class="w3-medium" style="line-height: 1.6; ">Fotoğrafçılığın temellerini öğrenmek, doğru ekipman seçimi yapmak ve etkili ışık kullanımı, yemek fotoğrafçılığında başarıya ulaşmanın anahtarlarıdır. Yemeğin dokusunu ve taze görünümünü en iyi şekilde yakalamak için doğru teknikleri uygulamak gerekir...</p><br>
+
+    <h2 style="color: black; font-size: 1.8rem;">Ekipman Seçimi</h2>
+    <p class="w3-medium" style="line-height: 1.6;">Yemek fotoğrafçılığında, doğru ekipman kullanımı son derece önemlidir. Dslr makineler, makro lensler ve doğal ışık kaynakları gibi araçlar, yemeklerin en iyi şekilde çekilmesi için gereklidir...</p><br>
+
+    <h2 style="color: black; font-size: 1.8rem;">Fotoğrafçılık İpuçları</h2>
+    <p class="w3-medium" style="line-height:1.6;">Yemekleri en güzel şekilde fotoğraflamak için dikkate almanız gereken bazı püf noktalar: yemeğin hazırlanış aşamasını yakalayın, kompozisyonu sade tutun, ışığı doğru kullanın ve renk uyumuna dikkat edin...</p>
+  </div>
+
+  <div class="w3-col s12 m6 l6 w3-padding-large"> <!-- 's12' mobilde tam genişlik alması için eklenmiştir -->
+    <!-- Fotoğraf Galerisi veya Yansıma -->
+    <div class="hover-container">
+    <img src="pankek.jpg" class="w3-round w3-image" alt="Food Photography" style="width:100%;  max-width: 500px; height: auto; margin:auto; display:block;">
+  </div>
+</div>
+
+<hr>
+
+<!-- İletişim Bölümü -->
+<div class="w3-container w3-content w3-padding-64 w3-display-container" style="max-width:800px; background-color: #f9f9f9;" id="İletişim">
+  <h1 class="w3-center">İletişim</h1>
+  <p class="w3-opacity w3-center"><i>Bizimle İletişime Geçmek İçin Bilgilerimiz:</i></p>
+  <div class="w3-large w3-center w3-padding-16">
+    <p><i class="fa fa-map-marker" style="width:30px; color: black;"></i> ANTALYA, Türkiye</p>
+    <p><i class="fa fa-phone" style="width:30px; color: black;"></i> Telefon: 8551872</p>
+    <p><i class="fa fa-envelope" style="width:30px; color: black;"></i> 
+      Email: <a href="mailto:buyukayelif39@gmail.com" style="text-decoration: none; color: black;">buyukayelif39@gmail.com</a>
+    </p>
+  </div>
+</div>
+
+
+</body>
+</html>
+
